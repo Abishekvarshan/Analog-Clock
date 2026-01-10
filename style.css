@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.analog-clock{
+    background-color: #fff;
+    width: 600px;
+    height: 600px;
+    border: 10px ridge red;
+    border-radius: 50%;
+    position: relative;
+}
+
+.dot{
+position: absolute;
+width: 10px;
+height: 10px;
+background-color: red;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+border-radius: 50%;
+z-index: 10;
+}
+
+.number{
+    --rotate:0;
+    font-size: 25px;
+    color: red;
+    position: absolute;
+  
+    width: 100%;
+    height: 100%;
+    text-align: center;
+ transform: rotate(var(--rotate));
+}
+
+.number-1  { --rotate: 30deg;  }
+.number-2  { --rotate: 60deg;  }
+.number-3  { --rotate: 90deg;  }
+.number-4  { --rotate: 120deg; }
+.number-5  { --rotate: 150deg; }
+.number-6  { --rotate: 180deg; }
+.number-7  { --rotate: 210deg; }
+.number-8  { --rotate: 240deg; }
+.number-9  { --rotate: 270deg; }
+.number-10 { --rotate: 300deg; }
+.number-11 { --rotate: 330deg; }
+.number-12 { --rotate: 0deg;   }
+
+
+.needle{
+    --rotation:0;
+  position: absolute;
+
+  
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+
+  transform-origin: bottom;
+  border-top-left-radius:50% ;
+   border-top-right-radius:50% ;
+   border: 1px solid rgb(37, 33, 33);
+}
+
+.sec{
+  width: 3px;
+  height: 45%;
+   background-color: red; 
+ 
+}
+
+.min{
+  width: 7px;
+  height: 40%;
+   background-color: black; 
+ 
+}
+.hours{
+  width: 10px;
+  height: 20%;
+   background-color: black; 
+ 
+}
